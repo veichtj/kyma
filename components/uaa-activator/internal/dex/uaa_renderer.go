@@ -20,7 +20,8 @@ const uaaConnector = `- type: xsuaa
     clientSecret: "{{ .ClientSecret | toString }}"
     redirectURI: "https://dex.{{ .ClusterDomain }}/callback"
     userNameKey: "user_name"
-    appname: "{{ .Xsappname | toString }}"`
+    appname: "{{ .Xsappname | toString }}"
+	basicAuthUnsupported: true`
 
 type (
 	UAASecret struct {
